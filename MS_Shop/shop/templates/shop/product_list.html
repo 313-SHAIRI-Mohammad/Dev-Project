@@ -1,0 +1,24 @@
+{% extends 'shop/base.html' %}
+{% load static %}
+{% block title %}Products | msUnderlineShop{% endblock %}
+{% block content %}
+<section class="products-section">
+    <h2>Latest Tech Products</h2>
+    <div class="product-grid">
+        {% for product in products %}
+        <div class="product-card">
+            <div class="product-image">
+                <img src="{{ product.image.url }}" alt="{{ product.name }}">
+            </div>
+            <div class="product-info">
+                <h3>{{ product.name }}</h3>
+                <p class="price">${{ product.price }}</p>
+                <a href="{% url 'shop:product_detail' product.id product.slug %}">View Details</a>
+            </div>
+        </div>
+        {% empty %}
+        <p>No products available right now. Please check back soon!</p>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}

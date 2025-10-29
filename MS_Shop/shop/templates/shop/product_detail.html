@@ -1,0 +1,28 @@
+{% extends 'shop/base.html' %}
+
+
+{% block title %}{{ product.name }} - MS_Shop{% endblock %}
+
+
+{% block content %}
+<article class="product-detail">
+<div class="product-media">
+{% if product.image %}
+<img src="{{ product.image.url }}" alt="{{ product.name }}">
+{% endif %}
+</div>
+<div class="product-info">
+<h2>{{ product.name }}</h2>
+<p class="price">${{ product.price }}</p>
+<p>{{ product.description|linebreaks }}</p>
+{% if product.in_stock %}
+<form method="post" action="#">{% csrf_token %}
+<label>Quantity <input type="number" name="quantity" value="1" min="1"></label>
+<button type="submit">Add to cart</button>
+</form>
+{% else %}
+<p>Out of stock</p>
+{% endif %}
+</div>
+</article>
+{% endblock %}
