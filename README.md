@@ -53,7 +53,7 @@ Demonstrates foundational knowledge in Python programming and problem-solving.
 ## 🌍 Connect With Me  
 
 - 📧 **Email:** [mohammadsharifi2505@gmail.com](mailto:mohammadsharifi2505@gmail.com)  
-- 🧑‍💻 **GitHub:** [github.com/MohammadSharifi](https://github.com/MohammadSharifi)  
+- 🧑‍💻 **GitHub:** [github.com/MohammadSharifi](https://github.com/313-SHAIRI-Mohammad/Dev-Project.git)  
 - 💼 *(Optional: Add LinkedIn or Portfolio link here if you create one)*  
 
 ---
